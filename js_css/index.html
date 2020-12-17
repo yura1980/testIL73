@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>TestIL73</title>
+    <link rel="shortcut icon" type="image/x-icon" href="test.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Заявка</div>
+        <form name="myForm" action="http://medosmotr-plus.ru/test_api.php/test_il73" id="bidForm">
+            <p class="input-group">
+                <label for="fam">Фамилия</label>
+                <input type="text" required name="fam" id="fam">
+            </p>
+            <p class="input-group">
+                <label for="name">Имя</label>
+                <input type="text" required name="name" id="name">
+            </p>
+            <p class="input-group">
+                <label for="otch">Отчество</label>
+                <input type="text" required name="otch" id="otch">
+            </p>
+            <p class="input-group">
+                <label for="pol">Пол</label>
+                <select id="pol" name="pol" required>
+                    <option value="0" selected>Мужской</option>
+                    <option value="1">Женский</option>
+                </select>
+            </p>
+            <p class="input-group">
+                <label for="dr">Дата рождения</label>
+                <input type="date" required placeholder="Введите дату" name="dr" id="dr">
+            </p>
+            <p class="input-group">
+                <label for="weight">Вес, кг</label>
+                <input type="number" required placeholder="Введите число" name="weight" id="weight">
+            </p>
+            <p class="input-group">
+                <label for="height">Рост, см</label>
+                <input type="number" required placeholder="Введите число" name="height" id="height">
+            </p>
+            <div id="result" style="text-align: center; display: none">Регистрационный номер
+                <div id="content" class="reg"></div>
+            </div>
+            <p class="input-group2">
+                <button type="submit" class="c-button">Сохранить</button>
+                <button id="loadfile" style="display: none" class="c-button ml10" type="button" onclick="load()">Загрузить</button>
+            </p>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
